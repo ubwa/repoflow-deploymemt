@@ -43,8 +43,8 @@ services:
       # Application config
       - IS_PRINT_ENV=true
       - SERVER_PORT=3000
-      - SERVER_URL=http://localhost:9080/api
-      - FRONTEND_URL=http://localhost:9080
+      - SERVER_URL=${SERVER_URL}/api
+      - FRONTEND_URL=${FRONTEND_URL}
       - TMP_FOLDER=/tmp
       - S3_USE_SSL=false
       - S3_PORT=9000

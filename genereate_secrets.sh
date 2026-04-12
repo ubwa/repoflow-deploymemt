@@ -2,7 +2,7 @@ S3_ACCESS_KEY="$(openssl rand -hex 16)"
 S3_SECRET_KEY="$(openssl rand -hex 32)"
 JWT_SECRET="$(openssl rand -hex 64)"
 HASURA_ADMIN_SECRET="$(openssl rand -hex 32)"
-POSTGRES_USER="$(openssl rand -hex 32)"
+POSTGRES_USER="$(openssl rand -hex )"
 POSTGRES_PASSWORD="$(openssl rand -hex 32)"
 POSTGRES_DB="repoflow"
 
