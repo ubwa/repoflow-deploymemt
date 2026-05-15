@@ -61,6 +61,7 @@ services:
       - JWS_ALGORITHM=HS256
       - DEFAULT_ADMIN_USER_NAME=admin
       - DEFAULT_ADMIN_PASSWORD=password
+      - ENABLE_AUTH_LOGGING=${ENABLE_AUTH_LOGGING:-false}
     volumes:
       - server-logs:/var/log/repoflow
       - grype-db:/srv/vulnerabilitiesScanning
