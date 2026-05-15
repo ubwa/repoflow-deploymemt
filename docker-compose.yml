@@ -20,6 +20,10 @@ services:
   client:
     image: api.repoflow.io/repoflow-public/docker-public/library/repoflow-client:0.8.8
     restart: unless-stopped
+    environment:
+      - REPOFLOW_SERVER=${REPOFLOW_SERVER:-http://localhost:8080/api}
+      - IS_PRINT_ENV=${IS_PRINT_ENV:-false}
+      - IGNORE_FRONTEND_URL_MISMATCH=${IGNORE_FRONTEND_URL_MISMATCH:-false}
     volumes:
       - ./client/env.js:/usr/share/nginx/html/env.js:ro
       - ./client/analytics.js:/usr/share/nginx/html/analytics.js:ro
