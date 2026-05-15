@@ -18,7 +18,7 @@ services:
       - repoflow-net
 
   client:
-    image: api.repoflow.io/repoflow-public/docker-public/library/repoflow-client:latest
+    image: api.repoflow.io/repoflow-public/docker-public/library/repoflow-client:0.8.8
     restart: unless-stopped
     volumes:
       - ./client/env.js:/usr/share/nginx/html/env.js:ro
