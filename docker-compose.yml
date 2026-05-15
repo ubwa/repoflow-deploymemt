@@ -18,7 +18,7 @@ services:
       - repoflow-net
 
   client:
-    image: api.repoflow.io/repoflow-public/docker-public/library/repoflow-client:0.9.0
+    image: api.repoflow.io/repoflow-public/docker-public/library/repoflow-client:latest
     restart: unless-stopped
     volumes:
       - ./client/env.js:/usr/share/nginx/html/env.js:ro
@@ -29,7 +29,7 @@ services:
       - repoflow-net
 
   server:
-    image: api.repoflow.io/repoflow-public/docker-public/library/repoflow-server:0.9.0
+    image: api.repoflow.io/repoflow-public/docker-public/library/repoflow-server:0.8.8
     restart: unless-stopped
     environment:
       # Secrets (from secrets.env — run with: docker compose --env-file secrets.env up)
